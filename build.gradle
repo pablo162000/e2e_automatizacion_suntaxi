@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.0.46'
+
+}
+
+group = 'com.nttdata'
+version = '1.0-SNAPSHOT'
+
+repositories { mavenCentral() }
+
+dependencies {
+    // Serenity
+    implementation "net.serenity-bdd:serenity-core:4.0.46"
+    implementation "net.serenity-bdd:serenity-screenplay:4.0.46"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:4.0.46"
+
+    testImplementation "net.serenity-bdd:serenity-cucumber:4.0.46"
+    testImplementation "io.github.bonigarcia:webdrivermanager:5.9.2"
+
+    // Runner JUnit 4
+    testImplementation "junit:junit:4.13.2"
+
+    // JSON testdata (checkout.json)
+    implementation  "com.fasterxml.jackson.core:jackson-databind:2.17.2"
+}
+
+test {
+    systemProperty "file.encoding", "UTF-8"
+    doFirst {
+        delete "build/cucumber-report"
+    }
+
+    // reporte Serenity despues del Test
+    finalizedBy 'aggregate'
+}

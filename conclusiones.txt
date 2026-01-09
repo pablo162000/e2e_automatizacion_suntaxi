@@ -1,0 +1,55 @@
+CONCLUSIONES Y HALLAZGOS DEL EJERCICIO
+
+Durante la implementación y ejecución de la prueba automatizada sobre la
+aplicación Saucedemo se obtuvieron los siguientes hallazgos y conclusiones.
+
+-----------------------------------------
+HALLAZGOS DURANTE LA EJECUCIÓN
+-----------------------------------------
+
+El flujo de compra se ejecutó correctamente desde el inicio de sesión hasta
+la confirmación final del pedido. En todas las ejecuciones realizadas, el
+mensaje “Thank you for your order!” se mostró de forma correcta, lo que indica
+que el flujo principal de compra (happy path) funciona como se espera.
+
+No se identificaron errores funcionales visibles en el flujo probado.
+
+-----------------------------------------
+HALLAZGOS TÉCNICOS
+-----------------------------------------
+
+Durante la automatización se presentaron algunos retos técnicos que fue
+necesario resolver:
+
+- Se detectó que el navegador Chrome mostraba popups o notificaciones que
+  interferían con la ejecución de la prueba automatizada. Este problema se
+  solucionó ejecutando el navegador en modo incógnito.
+
+- Fue importante manejar correctamente la versión del WebDriver, ya que una
+  incompatibilidad entre Chrome y ChromeDriver impedía la ejecución del test.
+  Esto se resolvió utilizando WebDriverManager con descarga automática.
+
+- El uso de datos externos en formato JSON permitió separar los datos de
+  prueba del código, facilitando la lectura y el mantenimiento del proyecto.
+
+-----------------------------------------
+OBSERVACIONES SOBRE LA AUTOMATIZACIÓN
+-----------------------------------------
+
+El uso del patrón Screenplay permitió mantener una estructura clara del
+proyecto, separando responsabilidades entre tareas, preguntas y elementos
+de la interfaz. Esto hace que el código sea más legible y escalable en caso
+de agregar nuevos escenarios.
+
+La automatización se enfocó en el flujo principal de compra. Como mejora
+futura, sería recomendable agregar escenarios negativos, validaciones de
+errores y pruebas con distintos tipos de usuarios.
+
+-----------------------------------------
+CONCLUSIÓN FINAL
+-----------------------------------------
+
+El ejercicio permitió validar que el flujo de compra de la aplicación es
+estable y que la automatización implementada es funcional y reproducible.
+El proyecto queda preparado para ser extendido con nuevos escenarios y
+para integrarse en un proceso de integración continua.
