@@ -63,6 +63,17 @@ Reporte Cucumber (JSON / HTML / XML):
 build/cucumber-report/
 
 ----------------------------------------------------
+REPORTE SERENITY (SIN EJECUCIÓN)
+----------------------------------------------------
+El repositorio incluye el reporte de Serenity BDD generado
+a partir de la última ejecución del escenario automatizado.
+
+El reporte puede visualizarse directamente sin ejecutar
+las pruebas en la siguiente ruta:
+
+target/site/serenity/index.html
+
+----------------------------------------------------
 OBSERVACIONES
 ----------------------------------------------------
 - El proyecto utiliza el patrón Screenplay para una mejor mantenibilidad
