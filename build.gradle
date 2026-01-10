@@ -16,16 +16,18 @@ dependencies {
     implementation "net.serenity-bdd:serenity-screenplay-webdriver:4.0.46"
 
     testImplementation "net.serenity-bdd:serenity-cucumber:4.0.46"
-    testImplementation "io.github.bonigarcia:webdrivermanager:5.9.2"
 
-    // Runner JUnit 4
-    testImplementation "junit:junit:4.13.2"
-
+    // JUnit 5
+    testImplementation "org.junit.jupiter:junit-jupiter:5.10.2"
+    testImplementation "org.junit.platform:junit-platform-suite:1.10.2"
+    // Cucumber JUnit Platform
+    testImplementation "io.cucumber:cucumber-junit-platform-engine:7.14.0"
     // JSON testdata (checkout.json)
     implementation  "com.fasterxml.jackson.core:jackson-databind:2.17.2"
 }
 
 test {
+    useJUnitPlatform()
     systemProperty "file.encoding", "UTF-8"
     doFirst {
         delete "build/cucumber-report"

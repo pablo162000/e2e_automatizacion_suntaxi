@@ -41,3 +41,11 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Ignorar todo target
+target/
+
+# Pero permitir el reporte Serenity
+!target/site/
+!target/site/serenity/
+!target/site/serenity/**

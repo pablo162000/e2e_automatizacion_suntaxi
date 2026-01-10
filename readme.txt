@@ -18,8 +18,7 @@ TECNOLOGÍAS UTILIZADAS
 - Gradle: 7.6.1
 - Serenity BDD: 4.0.46
 - Serenity Cucumber: 4.0.46
-- JUnit: 4.13.2
-- WebDriverManager: 5.9.2
+- JUnit Platform (JUnit 5)
 - Navegador: Google Chrome
 
 ----------------------------------------------------
@@ -30,10 +29,18 @@ CONFIGURACIÓN PREVIA
 3. Clonar el repositorio del proyecto
 
 ----------------------------------------------------
+CONFIGURACIÓN DEL DRIVER
+----------------------------------------------------
+- El WebDriver (ChromeDriver) es gestionado automáticamente por Serenity BDD
+  mediante la propiedad `webdriver.autodownload=true` definida en serenity.conf.
+- No es necesario instalar ni configurar WebDriverManager manualmente.
+
+----------------------------------------------------
 EJECUCIÓN DE LAS PRUEBAS
 ----------------------------------------------------
 Desde la raíz del proyecto ejecutar el siguiente comando
 utilizando Gradle Wrapper, según el sistema operativo:
+
 
 Windows (PowerShell):
 > .\gradlew clean test
@@ -52,11 +59,13 @@ REPORTES
 Reporte Serenity (principal):
 target/site/serenity/index.html
 
-Reporte Cucumber (JSON):
-build/cucumber-report/cucumber.json
+Reporte Cucumber (JSON / HTML / XML):
+build/cucumber-report/
 
 ----------------------------------------------------
 OBSERVACIONES
 ----------------------------------------------------
+- El proyecto utiliza el patrón Screenplay para una mejor mantenibilidad
 - Los datos del checkout se leen desde un archivo JSON externo
-- El WebDriver se gestiona automáticamente con WebDriverManager
+- Los reportes de Serenity se generan automáticamente al finalizar la ejecución
+
