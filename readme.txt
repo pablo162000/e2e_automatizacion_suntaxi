@@ -48,6 +48,9 @@ Windows (PowerShell):
 Linux / macOS:
 > ./gradlew clean test
 
+- Para correr localmente desde IntelliJ:
+  Ejecutar la clase RunnerTest (Runner simple)
+
 Este comando:
 - Limpia ejecuciones anteriores
 - Ejecuta el escenario automatizado
