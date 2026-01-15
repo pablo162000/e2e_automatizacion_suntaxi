@@ -1,7 +1,7 @@
 # Automatización E2E – Serenity BDD
 
 **Autor:** Pablo Suntaxi  
-**Proyecto:** Flujo de compra E2E – Saucedemo  
+**Proyecto:** Flujo de compra E2E – Saucedemo
 
 ---
 
@@ -17,7 +17,7 @@ utilizando el patrón **Screenplay** y **Cucumber**.
 - **Gradle:** 7.6.1
 - **Serenity BDD:** 4.0.46
 - **Serenity Cucumber:** 4.0.46
-- **JUnit Platform:** JUnit 5
+- **JUnit:** 4
 - **Navegador:** Google Chrome
 
 ---
@@ -63,7 +63,7 @@ Este comando realiza las siguientes acciones:
 - Genera los reportes de Serenity y Cucumber
 
 ### Para correr localmente desde IntelliJ:
-  Ejecutar la clase RunnerTest (Runner simple)
+Ejecutar la clase RunnerTest (Runner simple)
 
 
 ## Reportes
@@ -71,10 +71,11 @@ Este comando realiza las siguientes acciones:
 ```txt
 target/site/serenity/index.html
 ```
-### Reporte Cucumber (JSON / HTML / XML)
+### Reporte Cucumber (JSON)
 ```txt
-build/cucumber-report/
+build/cucumber-report/cucumber.json
 ```
+
 ## Reporte Serenity (sin ejecución)
 
 El repositorio incluye el reporte Serenity BDD generado a partir de la última
@@ -86,9 +87,9 @@ target/site/serenity/index.html
 ```
 ## Información adicional
 - El proyecto utiliza el patrón Screenplay para mejorar la mantenibilidad
-y legibilidad del código.
+  y legibilidad del código.
 
 - Los datos del proceso de checkout se leen desde un archivo JSON externo.
 
 - Los reportes de Serenity se generan automáticamente al finalizar la ejecución
-de las pruebas.
+  de las pruebas.
