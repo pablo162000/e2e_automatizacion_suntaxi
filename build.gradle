@@ -17,9 +17,10 @@ dependencies {
 
     testImplementation "net.serenity-bdd:serenity-cucumber:4.0.46"
 
-    // JUnit 5
-    testImplementation "org.junit.jupiter:junit-jupiter:5.10.2"
-    testImplementation "org.junit.platform:junit-platform-suite:1.10.2"
+    // JUnit 4
+
+    testImplementation 'junit:junit:4.13.2'
+
     // Cucumber JUnit Platform
     testImplementation "io.cucumber:cucumber-junit-platform-engine:7.14.0"
     // JSON testdata (checkout.json)
@@ -27,7 +28,6 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
     systemProperty "file.encoding", "UTF-8"
     doFirst {
         delete "build/cucumber-report"
